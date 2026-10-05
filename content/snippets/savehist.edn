@@ -1,0 +1,13 @@
+{:id "savehist"
+ :author "hkjels"
+ :title "Keep the minibuffer's memory"
+ :command "savehist-mode"
+ :tip? true
+ :tags #{:built-in :history :minibuffer}
+ :description "Keep minibuffer history between Emacs sessions."
+ :code "(use-package savehist\n  :ensure nil\n  :init (savehist-mode 1))"
+ :language "elisp"
+ :url "https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Emacs-Sessions.html"
+ :body ["Savehist remembers minibuffer histories across sessions. Commands, search terms, and other entries are easier to recall with M-p instead of typing them again."
+        "The library is named savehist, not save-hist. It is built in, so no package installation is needed."
+        "History is written locally to savehist-file. Treat that file as personal data: do not commit it or add sensitive histories such as credentials."]}

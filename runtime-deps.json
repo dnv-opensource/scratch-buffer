@@ -1,0 +1,10 @@
+[
+  {"file":"scittle.js","url":"https://cdn.jsdelivr.net/npm/scittle@0.8.33/dist/scittle.js","sha256":"e04a33ff90947057772f42e683314e9c9f8671ebb922398208b4ad1c76991373"},
+  {"file":"scittle.js.map","url":"https://cdn.jsdelivr.net/npm/scittle@0.8.33/dist/scittle.js.map","sha256":"ac8857f342645d6a0a0217fb5facf45f946d60cae85f431a8b9e70350cb8c7df"},
+  {"file":"scittle.replicant.js","url":"https://cdn.jsdelivr.net/npm/scittle@0.8.33/dist/scittle.replicant.js","sha256":"84638ce09bb0ced7e0eab3459054474e112ee8005c0e3835fd1e31bd367ada3a"},
+  {"file":"scittle.replicant.js.map","url":"https://cdn.jsdelivr.net/npm/scittle@0.8.33/dist/scittle.replicant.js.map","sha256":"df8532d4e2d9817506446ead8d9152e6ac8f28f8efe757ce8a8047ba7f68c027"},
+  {"file":"nexus/core.cljc","url":"https://raw.githubusercontent.com/cjohansen/nexus/v2026.08.1/src/nexus/core.cljc","sha256":"13dc16eb96d5258563c9880054ce22d93e2c3e5fbbbef9dbe0c3849dd7413431"},
+  {"file":"LICENSE-nexus.txt","url":"https://raw.githubusercontent.com/cjohansen/nexus/v2026.08.1/LICENSE","sha256":"a26595bd8628270c19e391348aaf271ec5f2c88b49ce3a43642b6c29bf8c77fa"},
+  {"file":"LICENSE-scittle.txt","url":"https://cdn.jsdelivr.net/npm/scittle@0.8.33/LICENSE","sha256":"cc07bd2bd6ba843a9a2865ed891d5a3b5835a64bab6fa90945403ee53965d46f"},
+  {"file":"LICENSE-replicant.txt","url":"https://raw.githubusercontent.com/cjohansen/replicant/v2026.06.2/LICENSE","sha256":"beb68e835fba7e0fc4ca1e2e708a4d53991a4bf6864a66e7295d3194af4e67a2"}
+]

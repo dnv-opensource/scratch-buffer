@@ -1,0 +1,12 @@
+{:id "magit"
+ :author "hkjels"
+ :title "Magit"
+ :tags #{:git :version-control}
+ :command "magit-status"
+ :code "(use-package magit\n  :ensure t\n  :bind (\"C-x g\" . magit-status))"
+ :language "elisp"
+ :description "Understand a change before you commit it."
+ :url "https://magit.vc/"
+ :body ["Magit is a text-first interface to Git. Its status buffer brings the working tree, staged changes, and recent history together."
+        "Start with M-x magit-status. Stage a hunk rather than a whole file, review the diff, and make a small, purposeful commit."
+        "Magit is an optional package, not part of Emacs itself. Configure a package archive you trust before using :ensure t; the declaration installs it if needed and binds C-x g to its status buffer."]}

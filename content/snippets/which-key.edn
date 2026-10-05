@@ -1,0 +1,13 @@
+{:id "which-key"
+ :author "hkjels"
+ :title "Let the next key come to you"
+ :command "which-key-mode"
+ :tip? true
+ :tags #{:built-in :which-key :discovery :keybindings}
+ :description "Pause after a prefix key to see what you can press next."
+ :code ";; Built into Emacs 30 and later.\n(use-package which-key\n  :ensure nil\n  :config (which-key-mode 1))"
+ :language "elisp"
+ :url "https://www.gnu.org/software/emacs/manual/html_node/emacs/Help.html"
+ :body ["Which-key shows the available continuations when you pause after a prefix such as C-x or C-c. It makes unfamiliar bindings easier to discover without memorizing a wall of keys."
+        "This example uses the version built into Emacs 30 and later. On an earlier Emacs, install which-key from a trusted package archive and change :ensure nil to :ensure t."
+        "Try C-x and wait for the suggestions. C-g cancels the prefix; nothing is executed just by reading the list."]}

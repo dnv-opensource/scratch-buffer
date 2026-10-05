@@ -1,0 +1,5 @@
+{:github "hkjels"
+ :full-name "Henrik Kjerringvåg"
+ :joined "2026-10"
+ :emacs-since "2018"
+ :interests #{:clojure :org-mode :fp :embedded :built-in}}

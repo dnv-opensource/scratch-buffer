@@ -1,0 +1,12 @@
+{:id "keep-your-place"
+ :author "hkjels"
+ :title "Pick up where you left off"
+ :tip? true
+ :command "save-place-mode"
+ :tags #{:built-in :files}
+ :description "Reopen a file at the position you last visited."
+ :code "(use-package saveplace\n  :ensure nil\n  :init (save-place-mode 1))"
+ :language "elisp"
+ :url "https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Emacs-Sessions.html"
+ :body ["Emacs can remember your position in files between sessions. Add this use-package declaration to your init file, or try M-x save-place-mode."
+        "It is a small convenience that becomes especially useful when you move between long notes, source files, and documentation."]}

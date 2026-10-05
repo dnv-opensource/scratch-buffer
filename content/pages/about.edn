@@ -1,0 +1,8 @@
+{:id "about"
+ :author "hkjels"
+ :title "About the group"
+ :description "An open door, not another tool to learn."
+ :body ["This is a place for people who use Emacs, used to use Emacs, or are curious about it. Bring a question, a small discovery, or a configuration that finally makes sense."
+        "Short demos, practical notes, and conversation are more useful than perfect presentations. Beginners are welcome. You do not need a particular language, operating system, or level of experience."
+        "This website borrows a few ideas from Emacs. A page is a buffer. The bottom bar is a mode-line. M-x is a quick way to find an action. You can also just use the links."
+        "GitHub holds our published knowledge and membership records. Pull requests make changes; Discussions are for conversation. There is no separate account or private database here."]}

@@ -1,0 +1,62 @@
+name: Validate and publish buffers
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  discussion:
+  discussion_comment:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      discussions: read
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+      - uses: DeLaGuardo/setup-clojure@13.7.0
+        with:
+          bb: "1.12.218"
+      - run: npm ci --no-audit --no-fund
+      - run: npm run validate && npm run test:unit
+      - run: npm run build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+          GITHUB_TOKEN: ${{ github.event_name != 'pull_request' && github.token || '' }}
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+      - uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: _site
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1

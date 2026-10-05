@@ -1,0 +1,13 @@
+{:id "eldoc"
+ :author "hkjels"
+ :title "Documentation where you are"
+ :command "eldoc-doc-buffer"
+ :tip? true
+ :tags #{:built-in :documentation :development :eglot}
+ :description "See documentation for the thing at point."
+ :code "(use-package eldoc\n  :ensure nil\n  :init (global-eldoc-mode 1))"
+ :language "elisp"
+ :url "https://www.gnu.org/software/emacs/manual/html_node/emacs/Programming-Language-Doc.html"
+ :body ["Eldoc shows contextual documentation in the echo area when the current mode provides it. Global Eldoc mode enables it in supported buffers, including Emacs Lisp."
+        "When the echo area is too small, run M-x eldoc-doc-buffer to open a dedicated documentation buffer. This command is available in Emacs 28 and later."
+        "Eglot supplies Eldoc information for its managed buffers. Enabling Eldoc alone does not install a language server or invent documentation for modes without a provider."]}

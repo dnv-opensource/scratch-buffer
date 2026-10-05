@@ -1,0 +1,12 @@
+{:id "repeat-mode"
+ :author "hkjels"
+ :title "Give a command an encore"
+ :tip? true
+ :command "repeat-mode"
+ :tags #{:built-in :navigation}
+ :description "Repeat related commands without repeating the whole key sequence."
+ :code "(use-package repeat\n  :ensure nil\n  :init (repeat-mode 1))"
+ :language "elisp"
+ :url "https://www.gnu.org/software/emacs/manual/html_node/emacs/Repeating.html"
+ :body ["Enable repeat-mode in Emacs 28 or later. Commands that provide a repeat map let you keep going with a single key."
+        "Try C-x o to move to another window, then press o again. The echo area tells you which repeat keys are available. C-g leaves the repeat map."]}

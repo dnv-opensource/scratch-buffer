@@ -1,0 +1,8 @@
+{:paths ["src" "scripts" "test"]
+ :tasks
+ {validate {:doc "Validate canonical member and content records"
+            :task (shell "bb scripts/validate.clj")}
+  test {:doc "Run pure application and data tests"
+        :task (shell "bb -cp src:scripts:test -m scratch.test-runner")}
+  build {:doc "Build the static Pages artifact (npm dependencies required)"
+         :task (shell "npm run build")}}}

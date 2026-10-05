@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="A community for people who use Emacs, used to use Emacs, or are curious about it.">
+    <meta name="theme-color" content="#172e35">
+    <meta name="app-base" content="{{base}}">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' {{theme-csp}}; style-src 'self' {{style-csp}}; img-src 'self'; font-src 'self'; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+    <title>{{title}} · *scratch-buffer*</title>
+    <link rel="icon" href="{{base}}assets/icons/mark.svg" type="image/svg+xml">
+    <link rel="icon" href="{{base}}assets/icons/icon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="{{base}}assets/icons/icon-180.png">
+    <link rel="manifest" href="{{base}}manifest.webmanifest">
+    <script>{{theme-script}}</script>
+    <style>{{styles}}</style>
+    <script defer src="{{base}}vendor/scittle.js"></script>
+    <script defer src="{{base}}vendor/scittle.replicant.js"></script>
+    <script type="application/x-scittle" src="{{base}}app.cljs"></script>
+  </head>
+  <body>
+    <div id="app">{{content}}</div>
+    <noscript><p class="noscript-note">All published pages are readable without JavaScript. Commands, themes, and offline caching need JavaScript.</p></noscript>
+  </body>
+</html>

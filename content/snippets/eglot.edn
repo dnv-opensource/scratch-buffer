@@ -1,0 +1,13 @@
+{:id "eglot"
+ :author "hkjels"
+ :title "Let Eglot do the introductions"
+ :tags #{:eglot :built-in :development :language-server}
+ :command "eglot"
+ :description "Connect a project to an installed language server."
+ :code ";; Emacs 29+, with clangd installed separately.\n(use-package eglot\n  :ensure nil\n  :hook ((c-mode . eglot-ensure)\n         (c++-mode . eglot-ensure)))"
+ :language "elisp"
+ :url "https://www.gnu.org/software/emacs/manual/html_mono/eglot.html"
+ :body ["Eglot is built into Emacs 29 and later. You still need to install a language server for your language, such as clangd for C and C++."
+        "Open a source file and run M-x eglot. Emacs offers completion, diagnostics, and navigation using its ordinary editing commands."
+        "Start interactively before adding the use-package declaration. That makes missing executables and project configuration problems easier to understand. The example starts Eglot in C and C++ buffers; adapt the hooks for your language."
+        "Completion, project navigation, Flymake diagnostics, and Eldoc documentation use familiar built-in interfaces rather than a separate dashboard."]}

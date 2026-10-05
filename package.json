@@ -1,0 +1,19 @@
+{
+  "name": "dnv-scratch-buffer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An editorial, static community website with Emacs interaction grammar.",
+  "scripts": {
+    "build": "node scripts/vendor.mjs && node scripts/icons.mjs && node scripts/avatars.mjs && node scripts/discussions.mjs && bb scripts/build.clj",
+    "validate": "bb scripts/validate.clj",
+    "test:unit": "bb -cp src:scripts:test -m scratch.test-runner && node --test test/scripts/discussions.test.mjs",
+    "test:browser": "playwright test",
+    "test": "npm run test:unit && npm run build && npm run test:browser",
+    "start": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0",
+    "sharp": "0.35.5"
+  }
+}

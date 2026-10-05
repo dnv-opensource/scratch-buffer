@@ -1,0 +1,5 @@
+{:name "*scratch-buffer*"
+ :repository "https://github.com/dnv-opensource/scratch-buffer"
+ :teams-url "https://teams.microsoft.com/l/channel/19%3A7dq6Hv8b2Fr8JYVYSFY50MJU1p6_FD6SbLmnxyb-DYA1%40thread.tacv2/scratch-buffer?groupId=296cfa2f-d8b2-444d-b54d-93af378b33d7&tenantId=adf10e2b-b6e9-41d6-be2f-c12bb566019c"
+ :description "A community for people who use Emacs, used to use Emacs, or are curious about it."
+ :status "An independent community initiative. Not an official DNV publication."}

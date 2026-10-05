@@ -1,0 +1,13 @@
+{:id "icomplete-vertical"
+ :author "hkjels"
+ :title "Give completion a little room"
+ :command "icomplete-vertical-mode"
+ :tip? true
+ :tags #{:built-in :completion :minibuffer}
+ :description "Read minibuffer candidates in a vertical list."
+ :code "(use-package icomplete\n  :ensure nil\n  :config\n  (icomplete-mode 1)\n  (icomplete-vertical-mode 1))"
+ :language "elisp"
+ :url "https://www.gnu.org/software/emacs/manual/html_node/emacs/Icomplete.html"
+ :body ["Icomplete is a built-in minibuffer completion interface. Its vertical mode, available in Emacs 28 and later, puts candidates on separate lines instead of squeezing them into the prompt."
+        "Try M-x after enabling these modes. The vertical list is also one of the inspirations for this site's command interface."
+        "Use one completion display at a time. If you already use Vertico or another minibuffer completion frontend, disable it before trying Icomplete."]}

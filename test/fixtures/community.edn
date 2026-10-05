@@ -1,0 +1,25 @@
+{:members [{:github "example-member"
+            :joined "2026-10"
+            :emacs-since "2018"
+            :favorite-command "magit-status"
+            :interests #{:clojure :org-mode}
+            :example? true}]
+ :meetings [{:id "example-first-gathering"
+             :title "A small show & tell"
+             :date "2026-10-21"
+             :time "14:00"
+             :timezone "Europe/Oslo"
+             :duration-minutes 30
+             :status :example
+             :example? true
+             :tags #{:beginner :community}
+             :description "Fictional meeting for tests, not a scheduled event."
+             :body ["A test fixture for meeting times, calendars, and linked talk material."]}]
+ :talks [{:id "a-smaller-init"
+          :title "A smaller init.el"
+          :example? true
+          :meeting-id "example-first-gathering"
+          :speaker "example-member"
+          :tags #{:configuration :beginner}
+          :description "Fictional talk for tests."
+          :body ["A test fixture for talk routes and meeting references."]}]}

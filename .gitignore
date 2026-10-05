@@ -1,0 +1,12 @@
+node_modules/
+_site/
+test-results/
+playwright-report/
+
+.agent-shell
+.clj-kondo/
+.cache/
+.cpcache/
+.lsp/
+
+!.clj-kondo/config.edn
