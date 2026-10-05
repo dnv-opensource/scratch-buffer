@@ -31,8 +31,11 @@ npx playwright install chromium
 npm test
 ```
 
-`npm test` runs unit tests, builds the site, and runs browser tests. Individual
-suites are available as `npm run test:unit` and `npm run test:browser`.
+`npm test` runs unit tests, builds the site, and runs 11 core browser checks.
+Use `npm run test:unit` for unit tests, `npm run test:browser:smoke` for the core
+browser checks, or `npm run test:browser` for the full browser suite against the
+current build. Pull requests and ordinary publishes run the core checks;
+scheduled and manual workflow runs use the full suite.
 
 ## Publish
 

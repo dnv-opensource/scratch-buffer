@@ -8,7 +8,8 @@
     "validate": "bb scripts/validate.clj",
     "test:unit": "bb -cp src:scripts:test -m scratch.test-runner && node --test test/scripts/discussions.test.mjs",
     "test:browser": "playwright test",
-    "test": "npm run test:unit && npm run build && npm run test:browser",
+    "test:browser:smoke": "playwright test --grep @smoke",
+    "test": "npm run test:unit && npm run build && npm run test:browser:smoke",
     "start": "node scripts/serve.mjs"
   },
   "devDependencies": {

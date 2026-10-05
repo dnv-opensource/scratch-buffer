@@ -373,7 +373,7 @@ test("the console welcomes curious readers once per page load", async ({ page })
   expect(welcomes).toHaveLength(2);
 });
 
-test("normal routes, command execution, history and focus", async ({ page }) => {
+test("normal routes, command execution, history and focus", { tag: "@smoke" }, async ({ page }) => {
   const errors = [];
   page.on("pageerror", error => errors.push(error.message));
   await ready(page);
@@ -511,7 +511,7 @@ test("snippets include package configurations and searchable built-in examples",
   await expect(page).toHaveURL(/\/snippets\/which-key\/$/);
 });
 
-test("keyboard, cancellation, history, buffer switching, search", async ({ page }) => {
+test("keyboard, cancellation, history, buffer switching, search", { tag: "@smoke" }, async ({ page }) => {
   await ready(page);
   await page.keyboard.press("Alt+x");
   await expect(page.getByRole("combobox")).toBeFocused();
@@ -756,7 +756,7 @@ test("every code block copies its exact text with the shared keyboard-accessible
   await expect.poll(() => page.evaluate(() => window.copiedCode)).toBe(changed);
 });
 
-test("mobile code copying remains unobscured while long lines scroll independently", async ({ browser, baseURL }) => {
+test("mobile code copying remains unobscured while long lines scroll independently", { tag: "@smoke" }, async ({ browser, baseURL }) => {
   const context = await browser.newContext({ hasTouch: true, viewport: { width: 320, height: 812 }, reducedMotion: "reduce" });
   await context.addInitScript(() => {
     Object.defineProperty(navigator, "clipboard", {
@@ -1410,7 +1410,7 @@ test("meeting timeline places dates beside entries and adapts on mobile", async 
   }
 });
 
-test("pointer completion, theme persistence and system changes", async ({ page }) => {
+test("pointer completion, theme persistence and system changes", { tag: "@smoke" }, async ({ page }) => {
   await ready(page);
   await command(page, "set-theme");
   await page.getByRole("option", { name: /dark After hours/ }).click();
@@ -1480,7 +1480,7 @@ test("tip notifications are accessible and expire independently of important mes
   }
 });
 
-test("safe useful HTML without JavaScript", async ({ browser, baseURL }) => {
+test("safe useful HTML without JavaScript", { tag: "@smoke" }, async ({ browser, baseURL }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   await page.goto(`${baseURL}${memberRoutes[0] || "people/"}`);
@@ -1641,7 +1641,7 @@ test("all content, membership and navigation surfaces render", async ({ page }) 
 });
 
 for (const width of [320, 375, 768, 1440]) {
-  test(`responsive accessibility at ${width}px`, async ({ page }) => {
+  test(`responsive accessibility at ${width}px`, { tag: [320, 1440].includes(width) ? "@smoke" : [] }, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await ready(page);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -1664,7 +1664,7 @@ for (const width of [320, 375, 768, 1440]) {
   });
 }
 
-test("touch navigation and reduced motion", async ({ browser, baseURL }) => {
+test("touch navigation and reduced motion", { tag: "@smoke" }, async ({ browser, baseURL }) => {
   const context = await browser.newContext({ viewport: { width: 375, height: 812 }, hasTouch: true, isMobile: true, reducedMotion: "reduce" });
   const page = await context.newPage();
   await page.goto(baseURL);
@@ -1680,7 +1680,7 @@ test("touch navigation and reduced motion", async ({ browser, baseURL }) => {
   await context.close();
 });
 
-test("offline shell, deep routes, GitHub failure and installation explanation", async ({ page, context }) => {
+test("offline shell, deep routes, GitHub failure and installation explanation", { tag: "@smoke" }, async ({ page, context }) => {
   await ready(page);
   await page.evaluate(() => navigator.serviceWorker.ready);
   await page.reload();

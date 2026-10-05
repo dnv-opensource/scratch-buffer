@@ -38,7 +38,7 @@ async function linkThread(page, number = 42) {
 test.describe("discussion snapshots", () => {
   test.use({ serviceWorkers: "block" });
 
-  test("shows loading on buffer open, reads safely, and reuses the snapshot through navigation", async ({ page, baseURL }) => {
+  test("shows loading on buffer open, reads safely, and reuses the snapshot through navigation", { tag: "@smoke" }, async ({ page, baseURL }) => {
     let release;
     const pending = new Promise(resolve => { release = resolve; });
     let requests = 0;
@@ -92,7 +92,7 @@ test.describe("discussion snapshots", () => {
   });
 
   for (const failure of ["HTTP", "invalid JSON", "unsafe URL", "network"]) {
-    test(`${failure} failure is explicit and supports retry without losing the buffer`, async ({ page }) => {
+    test(`${failure} failure is explicit and supports retry without losing the buffer`, { tag: failure === "network" ? "@smoke" : [] }, async ({ page }) => {
       let requests = 0;
       const warnings = [];
       page.on("console", message => { if (message.type() === "warning") warnings.push(message.text()); });

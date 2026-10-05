@@ -218,6 +218,7 @@ pre { max-width: 100%; padding: 1.3rem 1.5rem; margin: 1.8rem 0; background: var
 pre code { display: block; min-width: min-content; }
 .code-block { position: relative; margin: 1.8rem 0; }
 .code-block pre { margin: 0; }
+[data-enhanced] .code-block pre { padding-top: 3.5rem; }
 .code-copy { position: absolute; top: .4rem; right: .4rem; display: flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; padding: 0; background: var(--code-bg); color: var(--text-muted); text-decoration: none; }
 .code-copy:hover { background: var(--selection); color: var(--accent); }
 .discussion-note, .empty-note { border-top: 1px solid var(--border); padding-top: 1.7rem; }

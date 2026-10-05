@@ -40,7 +40,14 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}/
           GITHUB_TOKEN: ${{ github.event_name != 'pull_request' && github.token || '' }}
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:browser
+      - name: Core browser checks
+        if: github.event_name != 'schedule' && github.event_name != 'workflow_dispatch'
+        run: npm run test:browser:smoke
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+      - name: Full browser suite
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: npm run test:browser
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
       - uses: actions/upload-pages-artifact@v5.0.0

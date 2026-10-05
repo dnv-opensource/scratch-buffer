@@ -137,6 +137,11 @@ UI changes should preserve keyboard and touch use, focus restoration, visible
 focus, contrast in both themes, reduced motion, and no horizontal body scrolling
 at 320px. Browser tests cover routes, history, completion, themes, axe accessibility,
 small/mobile/tablet/desktop widths, no-JavaScript content, and offline navigation.
+After building, use `npm run test:browser:smoke` for the core checks. Run affected
+tests with `npm run test:browser -- --grep "test title"`; `npm run test:browser`
+runs the full suite. Keep critical regressions in the `@smoke` selection, which
+runs on pull requests and ordinary publishes. Scheduled and manual workflow runs
+retain full coverage.
 
 ## Public information only
 
