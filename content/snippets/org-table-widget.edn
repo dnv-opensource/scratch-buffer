@@ -1,6 +1,6 @@
 {:id "org-table-widget"
  :author "johanwk"
- :title "Turn Org tables into responsive widgets"
+ :title "Make wide org tables wrap -- far better readability!"
  :tags #{:org-mode :tables :visual :package}
  :command "org-table-widget-mode"
  :description "Display Org tables as responsive, pixel-aligned widgets while preserving their source."
