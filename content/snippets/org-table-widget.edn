@@ -1,0 +1,13 @@
+{:id "org-table-widget"
+ :author "johanwk"
+ :title "Make wide org tables wrap -- far better readability!"
+ :tags #{:org-mode :tables :visual :package}
+ :command "org-table-widget-mode"
+ :description "Display Org tables as responsive, pixel-aligned widgets while preserving their source."
+ :code "(use-package org-table-widget\n  :vc (:url \"https://github.com/yibie/org-table-widget\"\n       :rev \"v0.3.1\")\n  :hook (org-mode . org-table-widget-mode))"
+ :language "elisp"
+ :url "https://github.com/yibie/org-table-widget"
+ :body ["org-table-widget renders ordinary Org tables as responsive widgets with pixel-aligned columns, wrapped cells, borders, and optional alternating row backgrounds."
+        "The rendering uses overlays, so the underlying Org source remains available for editing, export, formulas, and Babel. Put point on a rendered row and press e to reveal and edit its source."
+        "The package handles mixed CJK and Latin text, emoji, inline code, explicit alignment cookies, and window resizing. It requires Emacs 29.1 or later, Org 9.6 or later, TextUI 0.8.0 or later, and a graphical frame."
+        "TextUI must also be installed from https://github.com/yibie/textui. In a terminal the mode can remain enabled, but tables are left as editable Org source."]}
